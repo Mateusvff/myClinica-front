@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+
+<body>
+    <h1>Selecione a opção:</h1>
+    <select id="opcao">
+        <option value="">Selecione uma opção</option>
+        <option value="especialidade">Especialidade</option>
+        <option value="medico">Médico</option>
+        <option value="receita">Receita</option>
+        <option value="consulta">Consulta</option>
+        <option value="medicamento">Medicamento</option>
+        <option value="paciente">Paciente</option>
+    </select>
+    <button onclick="redirecionarParaCadastro()">Ir para o Cadastro</button>
+
+    <script>
+        function redirecionarParaCadastro() {
+            const opcaoSelecionada = document.getElementById('opcao').value;
+            
+            if (opcaoSelecionada === 'especialidade') {
+                window.location.href = 'cadastro_especialidade.html';
+            } else if (opcaoSelecionada === 'medico') {
+                window.location.href = 'cadastro_medico.html';
+            } else if (opcaoSelecionada === 'receita') {
+                window.location.href = 'cadastro_receita.html';
+            } else if (opcaoSelecionada === 'consulta') {
+                window.location.href = 'cadastro_consulta.html';
+            } else if (opcaoSelecionada === 'medicamento') {
+                window.location.href = 'cadastro_medicamento.html';
+            } else if (opcaoSelecionada === 'paciente') {
+                window.location.href = 'cadastro_paciente.html';
+            }
+        }
+    </script>
+</body>
+</html>
